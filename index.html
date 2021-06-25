@@ -1,0 +1,36 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <p>To-Do-List</p>
+    </nav>
+    <div class="tool-box">
+        <div class="add-task">
+            <input type="text" id="list-input">
+            <select id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low" selected>Low</option>
+            </select>
+            <button id="add">ADD</button>
+        </div>
+        <div class="counter">
+            <p id="count">-</p>
+        </div>
+    </div>
+    <div id="list-table">
+        <div class="list-item">
+            <p>Task Name</p>
+            
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
