@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,12 +25,33 @@
             <p id="count">-</p>
         </div>
     </div>
-    <div id="list-table">
-        <div class="list-item">
-            <p>Task Name</p>
-            
+    <div class="display-data">
+        <div class="options">
+            <select id="filter">
+                <option value="completed">Completed</option>
+                <option value="in-progress">In Progress</option>
+                <option value="all" selected>All</option>
+            </select>
+            <select id="sort">
+                <option value="completed">High to Low</option>
+                <option value="in-progress">Low to High</option>
+                <!--recently added-->
+            </select>
+        </div> <!--options end here-->
+        
+        <div id="list-table">
+            <li class="task-item">
+                <div class="details">
+                    <p id="task-name">Task Name</p>
+                    <p id="date">Date</p>
+                </div>
+                <div class="task-buttons">
+                    <input type="checkbox">
+                    <button class="delete-btn">X</button>
+                </div>
+            </li>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="temp.js"></script>
 </body>
 </html>

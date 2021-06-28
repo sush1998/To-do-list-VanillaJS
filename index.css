@@ -7,8 +7,32 @@ nav{
     background-color: red;
 }
 
-.tool-box
+.tool-box ,#list-table>li , li>.details ,#list-table, li>.task-buttons
 {
     display: flex;
     justify-content: space-evenly;
 }
+
+.tool-box
+{
+    align-items: center;
+}
+
+#list-table>li
+{
+    background-color: aqua;
+    margin: auto;
+}
+
+li>.details ,#list-table
+{
+    flex-direction: column;
+}
+
+li>.task-buttons
+{
+    justify-content: center;
+    align-items: center;
+}
+
+
