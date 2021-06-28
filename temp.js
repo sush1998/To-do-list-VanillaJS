@@ -3,10 +3,34 @@ const input=document.querySelector("#list-input")
 const displayTable=document.querySelector("#list-table")
 const deleteBtn=document.querySelector(".delete-btn")
 const filterBtn=document.querySelector("#filter");
+const sortBtn=document.querySelector("#sort");
 const priority=document.querySelector("#priority");
 const count=document.querySelector("#count")
 
-const list=[];
+const list=[
+    {title:'lll',
+    completed:false,
+    priority:3,
+    id:Date.now()},
+
+    {title:'mmm',
+    completed:false,
+    priority:2,
+    id:Date.now()},
+
+    {title:'lll',
+    completed:false,
+    priority:3,
+    id:Date.now()},
+
+    {title:'hhh',
+    completed:false,
+    priority:1,
+    id:Date.now()},
+
+];
+
+//const list=[];
 
 function addToList(taskName,prio)
 {
@@ -32,9 +56,7 @@ function getCountofTask_Yet_toComplete(list)
 
 function filterTask(filterType)
 {   
-    // let filteredList=list.filter(item=>item.completed===true);
-    // console.log(filteredList)
-    // displayList(filteredList);
+
     console.log(filterType);
     switch(filterType)
     {
@@ -55,6 +77,12 @@ function filterTask(filterType)
     }
 
 }
+
+function sortTask(sortType)
+{
+    sortType=="high"?displayList(list.sort((task,task2)=>task.priority-task2.priority)):displayList(list.sort((task,task2)=>task2.priority-task.priority))
+}
+
 
 function deleteItem(itemToDelete)
 {
@@ -127,7 +155,13 @@ function renderListItem(itemToRender)
 }
 
 addBtn.addEventListener("click",()=>{addToList(input.value,priority.value)})
+
 filterBtn.addEventListener("change",function(){
-    filterTask(this.value)
-   // getCountofTask_Yet_toComplete(list)
+    filterTask(this.value)  
 })
+
+sortBtn.addEventListener('change',function()
+{
+    sortTask(this.value)
+})
+

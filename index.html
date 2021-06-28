@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
     <link rel="stylesheet" href="index.css">
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -15,9 +18,9 @@
         <div class="add-task">
             <input type="text" id="list-input">
             <select id="priority">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low" selected>Low</option>
+                <option value="1">High</option>
+                <option value="2">Medium</option>
+                <option value="3" selected>Low</option>
             </select>
             <button id="add">ADD</button>
         </div>
@@ -33,8 +36,8 @@
                 <option value="all" selected>All</option>
             </select>
             <select id="sort">
-                <option value="completed">High to Low</option>
-                <option value="in-progress">Low to High</option>
+                <option value="high" >High to Low</option>
+                <option value="low">Low to High</option>
                 <!--recently added-->
             </select>
         </div> <!--options end here-->
