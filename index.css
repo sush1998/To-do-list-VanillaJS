@@ -172,6 +172,13 @@ li>.details
     border-radius: 10px;
 }
 
+#list-table>.checked
+{
+    background-color: #979793;
+    border-radius: 10px;
+}
+
+
 
 .hidden
 {

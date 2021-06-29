@@ -83,6 +83,7 @@ function changeCheck(itemToChange)
     if(list[indexInList].completed==false)
     {
         list[indexInList].completed=true;
+        document.getElementById(`li-${itemToChange}`).classList.add("checked")
     }
     else
     {
@@ -103,6 +104,7 @@ function displayList(listToDisplay)
     else{
         displayData.classList.add("hidden");
     }
+
 
     let tableList=listToDisplay.map(task=>renderListItem(task))
     console.table(tableList)
@@ -135,8 +137,13 @@ function renderListItem(itemToRender)
             break;
 
     }
+
+    // if(itemToRender.id.completed===true)
+    // {
+    //     document.getElementById(`li-${itemToRender.id}`).classList.add("checked")
+    // }
     
-    return `<li class="task-item ${className}" >
+    return `<li class="task-item ${className}" id="li-${itemToRender.id}">
                 <div class="details">
                     <p class="task-title">${itemToRender.title}</p>
                     <p class="task-date">Date</p>
