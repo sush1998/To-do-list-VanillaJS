@@ -88,6 +88,7 @@ function changeCheck(itemToChange)
     else
     {
         list[indexInList].completed=false;
+        document.getElementById(`li-${itemToChange}`).classList.remove("checked")
     }
     
     getCountofTask_Yet_toComplete(list);
@@ -124,6 +125,7 @@ function renderListItem(itemToRender)
     }
     
     let className="low"
+    let classChecked="not-checked"
     let prio=itemToRender.priority;
     console.log(prio)
 
@@ -138,12 +140,15 @@ function renderListItem(itemToRender)
 
     }
 
-    // if(itemToRender.id.completed===true)
-    // {
-    //     document.getElementById(`li-${itemToRender.id}`).classList.add("checked")
-    // }
+    if(itemToRender.completed===true)
+    {
+        classChecked="checked";
+    }
+    else{
+        classChecked="not-checked"
+    }
     
-    return `<li class="task-item ${className}" id="li-${itemToRender.id}">
+    return `<li class="task-item ${className} ${classChecked}" id="li-${itemToRender.id}">
                 <div class="details">
                     <p class="task-title">${itemToRender.title}</p>
                     <p class="task-date">Date</p>

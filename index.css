@@ -176,6 +176,7 @@ li>.details
 {
     background-color: #979793;
     border-radius: 10px;
+    text-decoration: line-through;
 }
 
 
