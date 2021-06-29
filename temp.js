@@ -103,7 +103,7 @@ function displayList(listToDisplay)
     else{
         displayData.classList.add("hidden");
     }
-    
+
     let tableList=listToDisplay.map(task=>renderListItem(task))
     console.table(tableList)
     displayTable.innerHTML=tableList.join("")
@@ -138,8 +138,8 @@ function renderListItem(itemToRender)
     
     return `<li class="task-item ${className}" >
                 <div class="details">
-                    <p>${itemToRender.title}</p>
-                    <p id="date">Date</p>
+                    <p class="task-title">${itemToRender.title}</p>
+                    <p class="task-date">Date</p>
                 </div>
                 <div class="task-buttons">
                     ${checkbox}

@@ -67,10 +67,12 @@ nav>.material-icons{
 #priority
 {
     height: 2rem;
+    border-radius:5px;
 }
 #list-input
 {
     height: 1.7rem;
+    border-radius: 5px;
 }
 
 .divider
@@ -143,6 +145,14 @@ li>.details
     flex-direction: column;
     justify-content:center;
 }
+
+.task-title
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+   
+
 
 #list-table>.low
 {
