@@ -6,6 +6,7 @@ const filterBtn=document.querySelector("#filter");
 const sortBtn=document.querySelector("#sort");
 const priority=document.querySelector("#priority");
 const count=document.querySelector("#count")
+const displayData=document.querySelector(".display-data")
 
 
 
@@ -95,10 +96,20 @@ function changeCheck(itemToChange)
 
 function displayList(listToDisplay)
 {
+    if(list.length>0)
+    {
+        displayData.classList.remove("hidden");
+    }
+    else{
+        displayData.classList.add("hidden");
+    }
+    
     let tableList=listToDisplay.map(task=>renderListItem(task))
     console.table(tableList)
     displayTable.innerHTML=tableList.join("")
     getCountofTask_Yet_toComplete(list)
+
+    
 }
 
 

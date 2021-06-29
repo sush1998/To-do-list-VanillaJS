@@ -163,7 +163,10 @@ li>.details
 }
 
 
-
+.hidden
+{
+    visibility: hidden;
+}
 
 
 
