@@ -7,30 +7,9 @@ const sortBtn=document.querySelector("#sort");
 const priority=document.querySelector("#priority");
 const count=document.querySelector("#count")
 
-const list=[
-    {title:'lll',
-    completed:false,
-    priority:3,
-    id:Date.now()},
 
-    {title:'mmm',
-    completed:false,
-    priority:2,
-    id:Date.now()},
 
-    {title:'lll',
-    completed:false,
-    priority:3,
-    id:Date.now()},
-
-    {title:'hhh',
-    completed:false,
-    priority:1,
-    id:Date.now()},
-
-];
-
-//const list=[];
+const list=[];
 
 function addToList(taskName,prio)
 {
@@ -130,26 +109,30 @@ function renderListItem(itemToRender)
     {
         checkbox=`<input type="checkbox" id="${itemToRender.id}" onclick=changeCheck(${itemToRender.id}) checked>`
     }
+    
+    let className="low"
+    let prio=itemToRender.priority;
+    console.log(prio)
 
-    // return `<li class="task-item" id="${itemToRender.id}>
-    //     <div class="details">
-    //     <p >${itemToRender.title}</p>
-    //     <p>Date</p>
-    //     </div>
-    //     <div class="task-buttons">
-    //     <button class="delete-btn" id="${itemToRender.id}" onclick=deleteItem(${itemToRender.id})>X</button>
-    //     ${checkbox}
-    //     </div>
-    // </li>`
+    switch(prio)
+    {
+        case '1':
+            className="high"
+            break;
+        case '2':
+            className="medium"
+            break;
 
-    return `<li class="task-item" >
+    }
+    
+    return `<li class="task-item ${className}" >
                 <div class="details">
                     <p>${itemToRender.title}</p>
                     <p id="date">Date</p>
                 </div>
                 <div class="task-buttons">
                     ${checkbox}
-                    <button class="delete-btn" id="${itemToRender.id}" onclick=deleteItem(${itemToRender.id})>X</button>
+                    <i class="material-icons delete-btn" id="${itemToRender.id}" onclick=deleteItem(${itemToRender.id})>delete</i>
                 </div>
             </li>`
 }

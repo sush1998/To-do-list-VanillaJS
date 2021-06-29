@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
     <link rel="stylesheet" href="index.css">
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <p>To-Do-List</p>
+        <i class="material-icons">list</i><span> To-Do-List ✏️</span>
     </nav>
     <div class="tool-box">
         <div class="add-task">
-            <input type="text" id="list-input">
-            <select id="priority">
-                <option value="1">High</option>
-                <option value="2">Medium</option>
-                <option value="3" selected>Low</option>
-            </select>
+            <div>
+                <input type="text" id="list-input" placeholder="what's on your mind?">
+                <select id="priority">
+                    <option value="1">High</option>
+                    <option value="2">Medium</option>
+                    <option value="3" selected>Low</option>
+                </select>
+            </div>
+            <div class="divider"></div>
             <button id="add">ADD</button>
         </div>
         <div class="counter">
-            <p id="count">-</p>
+            <div id="count">--</div>
+            <div id="desp">Task to complete</div>
+            
         </div>
     </div>
     <div class="display-data">
         <div class="options">
+            <i class="material-icons">filter_alt</i>                
             <select id="filter">
                 <option value="completed">Completed</option>
                 <option value="in-progress">In Progress</option>
                 <option value="all" selected>All</option>
             </select>
+            <div class="divider"></div>
+            <i class="material-icons">sort</i>                
             <select id="sort">
                 <option value="high" >High to Low</option>
                 <option value="low">Low to High</option>
                 <!--recently added-->
             </select>
         </div> <!--options end here-->
-        
         <div id="list-table">
             <li class="task-item">
                 <div class="details">
@@ -50,9 +55,12 @@
                 </div>
                 <div class="task-buttons">
                     <input type="checkbox">
-                    <button class="delete-btn">X</button>
+                    <i class="material-icons delete-btn">delete</i>
+                    <!-- <button class="delete-btn"></button> -->
                 </div>
+                
             </li>
+            <hr>
         </div>
     </div>
     <script src="temp.js"></script>

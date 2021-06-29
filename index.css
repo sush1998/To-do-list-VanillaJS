@@ -3,8 +3,15 @@ html,body{
 }
 
 nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: red;
+    background-color: #DA0037;
+    font-size: 2rem;
+}
+nav>.material-icons{
+   font-size: 2rem;
 }
 
 .tool-box ,#list-table>li , li>.details ,#list-table, li>.task-buttons
@@ -16,23 +23,192 @@ nav{
 .tool-box
 {
     align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #252424b6;
+    padding: 10px 0;
+}
+.counter
+{
+    background-color: #111111;
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 3fr repeat(3, 1fr);
+    height: 6rem;
+    margin:  auto 5rem auto 1rem;
+}
+
+#count
+{
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: xx-large;
+    color: #EAEAEA;
+}
+
+
+#desp
+{
+    grid-area: 2 / 1 / 3 / 2;
+    font-size: smaller;
+    color: #EAEAEA;
+}
+.add-task
+{
+    height: 6rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    
+}
+#priority
+{
+    height: 2rem;
+}
+#list-input
+{
+    height: 1.7rem;
+}
+
+.divider
+{
+    padding: 10px;
+}
+
+
+#add
+{
+    font-size: large;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#add:hover
+{
+    background-color: #A1DD70;
+}
+#list-input, #priority
+{
+    font-size: large;
+    font-weight: 500;
 }
 
 #list-table>li
 {
-    background-color: aqua;
-    margin: auto;
+
+    margin: 1rem auto;
 }
 
-li>.details ,#list-table
+#list-table
 {
     flex-direction: column;
 }
 
+.display-data
+{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-table
+{
+    margin-top: 1rem;
+}
+ .display-data>.options
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li{
+    padding: 10px;
+}
 li>.task-buttons
 {
     justify-content: center;
     align-items: center;
 }
+
+li>.details 
+{   
+    padding-left: 20px;
+    width: 25rem;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#list-table>.low
+{
+    background-color: #9af078;
+    border-radius: 10px;
+}
+
+#list-table>.high
+{
+    background-color: #E46161;
+    border-radius: 10px;
+}
+
+#list-table>.medium
+{
+    background-color: #f5eb61;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px)
+{
+
+    .tool-box
+    {
+        flex-direction: column;
+    }
+
+    .add-task
+    {
+        width: 100%;
+        margin: 1rem auto;
+        
+    }
+
+    .counter
+    {
+        margin: auto;
+    }
+
+    
+    .display-data
+    {
+        padding:1rem auto;
+    }
+
+    li
+    {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    li>.details 
+    {  
+        width: 15rem;
+    }
+}
+
+
+
+
+
 
 
