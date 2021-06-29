@@ -125,7 +125,7 @@ function renderListItem(itemToRender)
     }
     
     let className="low"
-    let classChecked="not-checked"
+    let classChecked=""
     let prio=itemToRender.priority;
     console.log(prio)
 
