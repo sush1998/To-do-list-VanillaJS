@@ -7,7 +7,10 @@ const sortBtn=document.querySelector("#sort");
 const priority=document.querySelector("#priority");
 const count=document.querySelector("#count")
 const displayData=document.querySelector(".display-data")
-
+const clearModal=document.querySelector("#clear-Modal");
+const openBtn=document.querySelector("#openBtn");
+const closeBtn=document.querySelector(".close");
+const modalYes=document.querySelector("#modalYesBtn")
 
 
 const list=[];
@@ -30,7 +33,12 @@ function addToList(taskName,prio)
 function getCountofTask_Yet_toComplete(list)
 {
     let number= list.reduce((acc,item)=>item.completed==false?acc+1:acc,0)
-    count.innerHTML=number
+    count.innerHTML=number;
+
+    if(number==0)
+    {
+        showEditModal()
+    }
     
 }
 
@@ -79,6 +87,7 @@ function deleteItem(itemToDelete)
 function changeCheck(itemToChange)
 {
     console.log("change  clicked");
+    
     let indexInList=list.findIndex(item=>item.id==itemToChange);
     if(list[indexInList].completed==false)
     {
@@ -96,11 +105,23 @@ function changeCheck(itemToChange)
  
 }
 
+function showEditModal()
+{
+    clearModal.style.display="block";
+    
+
+
+}
+
+
+
+
 function displayList(listToDisplay)
 {
     if(list.length>0)
     {
         displayData.classList.remove("hidden");
+        
     }
     else{
         displayData.classList.add("hidden");
@@ -171,3 +192,15 @@ sortBtn.addEventListener('change',function()
     sortTask(this.value)
 })
 
+closeBtn.addEventListener("click",function()
+{
+    editModal.style.display="none"
+})
+
+modalYes.addEventListener("click",function()
+{
+    console.log("yes clicked")
+    list.length=0;
+    displayList(list)
+    clearModal.style.display="none";
+})
