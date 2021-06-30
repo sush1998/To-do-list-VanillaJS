@@ -210,3 +210,8 @@ modalNo.addEventListener("click",function()
 {
     clearModal.style.display="none";
 })
+
+closeBtn.addEventListener("click",function()
+{
+    editModal.style.visibility="hidden";
+})
