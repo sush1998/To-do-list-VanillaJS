@@ -11,6 +11,7 @@ const clearModal=document.querySelector("#clear-Modal");
 const openBtn=document.querySelector("#openBtn");
 const closeBtn=document.querySelector(".close");
 const modalYes=document.querySelector("#modalYesBtn")
+const modalNo=document.querySelector("#modalNoBtn");
 
 
 const list=[];
@@ -202,5 +203,10 @@ modalYes.addEventListener("click",function()
     console.log("yes clicked")
     list.length=0;
     displayList(list)
+    clearModal.style.display="none";
+})
+
+modalNo.addEventListener("click",function()
+{
     clearModal.style.display="none";
 })
