@@ -18,12 +18,15 @@ const list=[];
 
 function addToList(taskName,prio)
 {
+    const date=new Date();
+    const options={year:'numeric',month:'long',day:'numeric'};
     //console.log("clicked");
     let newtask={
         title:taskName,
         completed:false,
         priority:prio,
-        id:Date.now()
+        id:Date.now(),
+        date:date.toLocaleString('en-US',options)
     }
     list.unshift(newtask)
     input.value="";
@@ -149,7 +152,8 @@ function renderListItem(itemToRender)
     let className="low"
     let classChecked=""
     let prio=itemToRender.priority;
-    console.log(prio)
+    
+
 
     switch(prio)
     {
@@ -173,7 +177,7 @@ function renderListItem(itemToRender)
     return `<li class="task-item ${className} ${classChecked}" id="li-${itemToRender.id}">
                 <div class="details">
                     <p class="task-title">${itemToRender.title}</p>
-                    <p class="task-date">Date</p>
+                    <p class="task-date">${itemToRender.date}</p>
                 </div>
                 <div class="task-buttons">
                     ${checkbox}
