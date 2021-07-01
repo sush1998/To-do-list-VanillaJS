@@ -221,7 +221,7 @@ modalNo.addEventListener("click",function()
 
 closeBtn.addEventListener("click",function()
 {
-    editModal.style.display="none"
+    clearModal.style.display="none"
 })
 
 startBtn.addEventListener("click",function()
