@@ -25,6 +25,7 @@ function addToList(taskName,prio)
     if(input.value=="")
     {
         addtextError.innerHTML="Please enter Task";
+        addtextError.focus()
     }
     else{
         addtextError.innerHTML=""

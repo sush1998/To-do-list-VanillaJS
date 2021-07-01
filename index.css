@@ -325,10 +325,16 @@ li>.details
     }
     #addTask-Error
     {
-        margin-left: 4rem;
+        margin-left: 6rem;
     }
-
-    
+    .modal-content>#message
+    {
+        font-size: 1.5rem
+    }
+    .modal-content>#delete
+    {
+        font-size: 1rem;
+    }
 }
 
 
@@ -345,16 +351,19 @@ li>.details
     overflow: auto;
     left: 0;
     top: 0;
-    background-color:  #00000050;
+    background-color:  #0000001a;
+    
 }
 
 .modal-content
 {
     margin: auto;
-    background-color: #FFFFFF;
+    background-color: #252424;
     padding: 20px;
-    width: 80%;
+    width: 50%;
     border: 2px solid #111111 ;
+    text-align: center;
+    color: #ffffff;
 }
 
 .close
@@ -364,6 +373,27 @@ li>.details
     font-weight: bold;
 }
 
+.modal-content>#message
+{
+    padding-top: 1rem;
+    color: #72cc28;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.modal-content>#delete
+{
+    font-size: 1.5rem;
+}
+
+.modal-content>button
+{
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 10px;
+    width: 5rem;
+}
 
 
 
