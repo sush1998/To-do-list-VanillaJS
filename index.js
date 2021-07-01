@@ -15,27 +15,37 @@ const modalNo=document.querySelector("#modalNoBtn");
 const startBtn=document.querySelector("#start-btn")
 const home=document.querySelector(".home")
 const app=document.querySelector(".app-content")
-
+const addtextError=document.querySelector("#addTask-Error")
 
 
 const list=[];
 
 function addToList(taskName,prio)
 {
-    const date=new Date();
-    const options={year:'numeric',month:'long',day:'numeric'};
+    if(input.value=="")
+    {
+        addtextError.innerHTML="Please enter Task";
+    }
+    else{
+        addtextError.innerHTML=""
+        const date=new Date();
+        const options={year:'numeric',month:'long',day:'numeric'};
     //console.log("clicked");
-    let newtask={
+        let newtask=
+        {
         title:taskName,
         completed:false,
         priority:prio,
         id:Date.now(),
         date:date.toLocaleString('en-US',options)
+        }
+        list.unshift(newtask)
+        input.value="";
+        priority.value=0;
+        input.focus()
+        displayList(list);
     }
-    list.unshift(newtask)
-    input.value="";
-    input.focus()
-    displayList(list);
+    
 }
 
 function getCountofTask_Yet_toComplete(list)

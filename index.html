@@ -25,15 +25,15 @@
         <div class="tool-box">
             <div class="add-task">
                 <div>
-                    <input type="text" id="list-input" placeholder="what's on your mind?">
-                    <select id="priority">
-                        <option disabled selected>Priority</option>
+                    <input type="text" id="list-input" placeholder="what's on your mind?" required>
+                    <select id="priority" required>
+                        <option value="0" disabled selected>Priority</option>
                         <option value="1">High</option>
                         <option value="2">Medium</option>
                         <option value="3" >Low</option>
                     </select>
                 </div>
-                <div class="divider"></div>
+                <div id="addTask-Error" class="divider"></div>
                 <button id="add">ADD</button>
             </div>
             <div class="counter">
