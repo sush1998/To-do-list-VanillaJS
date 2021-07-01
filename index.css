@@ -179,7 +179,20 @@ li>.details
 {
     background-color: #979793;
     border-radius: 10px;
-    text-decoration: line-through;
+    
+}
+.task-buttons>i
+{
+    visibility: hidden;
+}
+
+.checked>.task-buttons>i{
+    visibility: visible;
+}
+
+.checked>.details
+{
+    text-decoration:line-through;
 }
 
 .task-buttons>input
