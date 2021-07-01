@@ -217,5 +217,5 @@ modalNo.addEventListener("click",function()
 
 closeBtn.addEventListener("click",function()
 {
-    editModal.style.visibility="hidden";
+    editModal.style.display="none"
 })
