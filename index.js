@@ -12,6 +12,10 @@ const openBtn=document.querySelector("#openBtn");
 const closeBtn=document.querySelector(".close");
 const modalYes=document.querySelector("#modalYesBtn")
 const modalNo=document.querySelector("#modalNoBtn");
+const startBtn=document.querySelector("#start-btn")
+const home=document.querySelector(".home")
+const app=document.querySelector(".app-content")
+
 
 
 const list=[];
@@ -218,4 +222,10 @@ modalNo.addEventListener("click",function()
 closeBtn.addEventListener("click",function()
 {
     editModal.style.display="none"
+})
+
+startBtn.addEventListener("click",function()
+{
+    home.style.display="none"
+    app.style.display="block"
 })

@@ -12,59 +12,71 @@
     <nav>
         <i class="material-icons">list</i><span> To-Do-List ✏️</span>
     </nav>
-    <div class="tool-box">
-        <div class="add-task">
-            <div>
-                <input type="text" id="list-input" placeholder="what's on your mind?">
-                <select id="priority">
-                    <option disabled selected>Priority</option>
-                    <option value="1">High</option>
-                    <option value="2">Medium</option>
-                    <option value="3" >Low</option>
-                </select>
-            </div>
-            <div class="divider"></div>
-            <button id="add">ADD</button>
+    <div class="home">
+        <img src="images/istockphoto-1168738399-612x612.jpg">
+        <div class="quote">
+            <q>Never begin the day until it is finished on paper.</q>
+            <p>― Jim Rohn</p>
         </div>
-        <div class="counter">
-            <div id="count">--</div>
-            <div id="desp">Task to complete</div>
+        <p>Get a clear view of the day ahead</p>
+        <button id="start-btn">Start Planning</button>
+    </div>
+    <div class="app-content">
+        <div class="tool-box">
+            <div class="add-task">
+                <div>
+                    <input type="text" id="list-input" placeholder="what's on your mind?">
+                    <select id="priority">
+                        <option disabled selected>Priority</option>
+                        <option value="1">High</option>
+                        <option value="2">Medium</option>
+                        <option value="3" >Low</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <button id="add">ADD</button>
+            </div>
+            <div class="counter">
+                <div id="count">--</div>
+                <div id="desp">Task to complete</div>
+                
+            </div>
+        </div>
+        <div class="modal" id="clear-Modal">
+            <div class="modal-content">
+    
+                <span class="close">&times;</span>
+                    <p>Done with all tasks ?</p>
+                    <p>Clear all ?</p>
+                    <button id="modalNoBtn">No</button>
+                    <button id="modalYesBtn">Yes</button>
+                </div>
             
         </div>
-    </div>
-    <div class="modal" id="clear-Modal">
-        <div class="modal-content">
-
-            <span class="close">&times;</span>
-                <p>Done with all tasks ?</p>
-                <p>Clear all ?</p>
-                <button id="modalNoBtn">No</button>
-                <button id="modalYesBtn">Yes</button>
-            </div>
         
+        <div class="display-data hidden">
+            <div class="options ">
+                <i class="material-icons">filter_alt</i>                
+                <select id="filter">
+                    <option value="completed">Completed</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="all" selected>All</option>
+                </select>
+                <div class="divider"></div>
+                <div class="divider"></div>
+                <i class="material-icons">sort</i>                
+                <select id="sort">
+                    <option value="high" >High to Low</option>
+                    <option value="low">Low to High</option>
+                    <!--recently added-->
+                </select>
+            </div> <!--options end here-->
+            <div id="list-table">
+                
+            </div>
+        </div>
     </div>
     
-    <div class="display-data hidden">
-        <div class="options ">
-            <i class="material-icons">filter_alt</i>                
-            <select id="filter">
-                <option value="completed">Completed</option>
-                <option value="in-progress">In Progress</option>
-                <option value="all" selected>All</option>
-            </select>
-            <div class="divider"></div>
-            <div class="divider"></div>
-            <i class="material-icons">sort</i>                
-            <select id="sort">
-                <option value="high" >High to Low</option>
-                <option value="low">Low to High</option>
-                <!--recently added-->
-            </select>
-        </div> <!--options end here-->
-        <div id="list-table">
-            
-        </div>
-    </div>
     <script src="index.js"></script>
 </body>
 </html>

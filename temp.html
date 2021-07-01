@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,44 @@
     <link rel="stylesheet" href="temp.css">
 </head>
 <body>
-    <button id="openBtn">Open Modal</button>
-
-
-    <div class="modal" id="edit-Modal">
-        <div class="modal-content">
-
-            <span class="close">&times;</span>
-            <div class="edit-task">
-                <input id="edit-input" placeholder="Task name">
-                <select id="edit-priority">
-                    <option disabled selected>Priority</option>
-                    <option value="1">High</option>
-                    <option value="2">Medium</option>
-                    <option value="3" >Low</option>
-                </select>
-                <button>Edit</button>
-            </div>
-            
+    <nav>
+        <i class="material-icons">list</i><span> To-Do-List ✏️</span>
+    </nav>
+    <div class="home">
+        <img src="images/istockphoto-1168738399-612x612.jpg">
+        <div class="quote">
+            <q>Never begin the day until it is finished on paper.</q>
+            <p>― Jim Rohn</p>
         </div>
-        
+        <p>Get a clear view of the day ahead</p>
+        <button id="start-btn">Start Planning</button>
     </div>
+
+    <div class="app-content">
+        <div class="tool-box">
+            <div class="add-task">
+                <div>
+                    <input type="text" id="list-input" placeholder="what's on your mind?">
+                    <select id="priority">
+                        <option disabled selected>Priority</option>
+                        <option value="1">High</option>
+                        <option value="2">Medium</option>
+                        <option value="3" >Low</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <button id="add">ADD</button>
+            </div>
+            <div class="counter">
+                <div id="count">--</div>
+                <div id="desp">Task to complete</div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    
     <script src="temp.js"></script>
 </body>
 </html>

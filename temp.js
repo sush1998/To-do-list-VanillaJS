@@ -1,17 +1,10 @@
-const editModal=document.querySelector("#edit-Modal");
-const openBtn=document.querySelector("#openBtn");
-const closeBtn=document.querySelector(".close");
+const startBtn=document.querySelector("#start-btn")
 
+const home=document.querySelector(".home")
+const app=document.querySelector(".app-content")
 
-
-openBtn.addEventListener("click",function()
+startBtn.addEventListener("click",function()
 {
-   console.log("clicked")
-   editModal.style.display="block"
-})
-
-
-closeBtn.addEventListener("click",function()
-{
-    editModal.style.visibility="hidden";
+    home.style.display="none"
+    app.style.display="block"
 })

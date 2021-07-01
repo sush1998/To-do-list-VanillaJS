@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 html,body{
     margin:0
 }
@@ -12,6 +13,57 @@ nav{
 }
 nav>.material-icons{
    font-size: 2rem;
+}
+
+
+
+.home
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
+.home>img
+{
+    margin:5rem auto 1rem auto;
+    width: 30%;
+    border:5px solid #111111;
+    border-radius: 10px;
+}
+
+.home>.quote{
+    margin: auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+
+}
+.quote>p{
+    text-align: center;
+}
+
+.home>p
+{
+    font-family: system-ui;
+    margin: 1rem auto;
+    font-size: 1rem;
+}
+
+
+
+.home>button
+{
+    margin: auto;
+    background-color: #f00640;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.app-content
+{
+    display: none;
 }
 
 .tool-box ,#list-table>li , li>.details ,#list-table, li>.task-buttons
@@ -251,6 +303,19 @@ li>.details
     {  
         width: 15rem;
     }
+
+    .home>img
+    {
+        margin:2rem auto 1rem auto;
+        width: 70%; 
+    }
+
+    .home>.quote
+    {
+        font-size: 1rem;
+    }
+
+    
 }
 
 
